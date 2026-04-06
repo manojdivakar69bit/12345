@@ -51,7 +51,7 @@ const Index = () => {
     <div className="min-h-screen flex flex-col items-center justify-center bg-background px-4 py-10">
       {/* Logo */}
       <div className={`transition-all duration-700 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-          <img src="/logo.png" alt="Call My Family" </ className="w-32 h-32 object-contain mx-auto mb-2" />
+        <img src="/logo.png" alt="Call My Family" className="w-32 h-32 object-contain mx-auto mb-2" />
       </div>
 
       {/* Tagline */}
@@ -68,7 +68,7 @@ const Index = () => {
 
       {/* Content area */}
       <div className={`w-full max-w-md space-y-6 transition-all duration-700 delay-300 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-        {/* QR Code - small */}
+        {/* QR Code */}
         <div className="flex justify-center">
           <DecorativeQrCode />
         </div>
@@ -81,9 +81,9 @@ const Index = () => {
         </div>
 
         {/* Buttons */}
-        <div className="flex gap-3">
-          <Button asChild className="flex-1 emergency-gradient hover:opacity-90 text-primary-foreground"><Link to="/login?role=admin">Admin Panel</Link></Button>
-          <Button asChild variant="outline" className="flex-1"><Link to="/login?role=agent">Agent Panel</Link></Button>
+        <div className="flex flex-col gap-3">
+          <Button asChild className="w-full emergency-gradient hover:opacity-90 text-primary-foreground h-12 text-base rounded-full"><Link to="/login?role=admin">Admin Panel</Link></Button>
+          <Button asChild variant="outline" className="w-full h-12 text-base rounded-full"><Link to="/login?role=agent">Agent Panel</Link></Button>
         </div>
 
         {/* Privacy */}
